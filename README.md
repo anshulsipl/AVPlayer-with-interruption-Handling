@@ -29,9 +29,7 @@
       [self setPlayerURL:[NSURL URLWithString:@"YourStreamURl"] withStationName:@"Dummy" andStationDial:@"Dial"];
 
 
-
-
-//set Player URL from all the screens of app. and set name on player with dial FM. Also it will clear instance of already playing on player.
+/* set Player URL from all the screens of app. and set name on player with dial FM. Also it will clear instance of already playing on player.*/
 -(void)setPlayerURL:(NSURL *)str_URL withStationName:( NSString *)str_stname andStationDial:(NSString *)str_fm{    
     NSURL *url = str_URL;
     AVPlayer *player = [[AVPlayer alloc]initWithURL:url];
