@@ -30,7 +30,9 @@
 
 
 /* set Player URL from all the screens of app. and set name on player with dial FM. Also it will clear instance of already playing on player.*/
--(void)setPlayerURL:(NSURL *)str_URL withStationName:( NSString *)str_stname andStationDial:(NSString *)str_fm{    
+
+-(void)setPlayerURL:(NSURL *)str_URL withStationName:( NSString *)str_stname andStationDial:(NSString *)str_fm
+{    
     NSURL *url = str_URL;
     AVPlayer *player = [[AVPlayer alloc]initWithURL:url];
     if (_audioPlayer != nil)
@@ -43,7 +45,6 @@
     }
     _audioPlayer = player;
     [_audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
-
 }
 
 
