@@ -84,11 +84,12 @@
 
 - (void)handleAudioSessionInterruption:(NSNotification*)notification {
     
-    NSNumber *interruptionType = [[notification userInfo] objectForKey:AVAudioSessionInterruptionTypeKey];
-    NSNumber *interruptionOption = [[notification userInfo] objectForKey:AVAudioSessionInterruptionOptionKey];
+    
+      NSNumber *interruptionType = [[notification userInfo] objectForKey:AVAudioSessionInterruptionTypeKey];
+      NSNumber *interruptionOption = [[notification userInfo] objectForKey:AVAudioSessionInterruptionOptionKey];
     
     
-    switch (interruptionType.unsignedIntegerValue) {
+      switch (interruptionType.unsignedIntegerValue) {
         case AVAudioSessionInterruptionTypeBegan:{
             // • Audio has stopped, already inactive
             // • Change state of UI, etc., to reflect non-playing state
@@ -107,4 +108,4 @@
         } break;
         default:            break;
     }
-}
+   }
